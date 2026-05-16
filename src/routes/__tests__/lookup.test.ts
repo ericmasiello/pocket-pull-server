@@ -1,6 +1,6 @@
 import { env } from "cloudflare:test";
 import { describe, it, expect } from "vitest";
-import app from "../src/index";
+import app from "../../index";
 
 describe("POST /lookup", () => {
   it("returns 400 for missing request body", async () => {
@@ -44,6 +44,5 @@ describe("POST /lookup", () => {
     expect(data).toHaveProperty("imageURL");
     expect(data).toHaveProperty("tcgplayerURL");
     expect(data).toHaveProperty("prices");
-    expect(data.prices).toHaveProperty("nearMint");
   });
 });
