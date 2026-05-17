@@ -1,8 +1,6 @@
 import type { Context } from "hono";
-import type { LookupRequest, LookupResponse, LookupErrorResponse } from "../types/api";
-import { findCard } from "../services/pokemon-tcg-client";
 
-export async function handleLookup(c: Context<{ Bindings: Env }>): Promise<Response> {
+export async function handleLookup(_c: Context<{ Bindings: Env }>): Promise<Response> {
   // TODO: implement
   // 1. Parse and validate request body as LookupRequest
   // 2. Call findCard(setCode, collectorNumber, c.env.POKEMON_TCG_API_KEY)

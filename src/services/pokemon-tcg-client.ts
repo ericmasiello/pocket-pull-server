@@ -1,11 +1,9 @@
-import type { PokemonTcgCard, PokemonTcgSearchResponse } from "../types/pokemon-tcg";
-
-const POKEMON_TCG_API_BASE = "https://api.pokemontcg.io/v2";
+import type { PokemonTcgCard } from "../types/pokemon-tcg";
 
 export async function findCard(
-  setCode: string,
-  collectorNumber: string,
-  apiKey: string,
+  _setCode: string,
+  _collectorNumber: string,
+  _apiKey: string,
 ): Promise<PokemonTcgCard | null> {
   // TODO: implement
   // 1. Build query: GET /v2/cards?q=set.id:{setCode} number:{collectorNumber}

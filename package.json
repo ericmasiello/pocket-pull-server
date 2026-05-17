@@ -8,6 +8,9 @@
     "deploy": "wrangler deploy",
     "test": "vitest run",
     "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint src/",
+    "lint:fix": "oxlint src/ --fix",
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
@@ -16,6 +19,7 @@
   "devDependencies": {
     "@cloudflare/vitest-pool-workers": "^0.8.0",
     "@cloudflare/workers-types": "^4.20250516.0",
+    "oxlint": "^1.65.0",
     "typescript": "^5.8.0",
     "vitest": "^3.1.0",
     "wrangler": "^4.14.0"
